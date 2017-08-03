@@ -610,7 +610,7 @@ if __name__ == '__main__':
     test_image_directories = ['./data/test-jpg/', './data/test-jpg-additional/']
     test_image_extension = training_image_extension
     # Index your experiment.
-    experiment = 44
+    experiment = 43
     output_directory = './results/experiment' + str(experiment) + '/'
     template_output_directory = './results/experiment_template'
     if not os.path.exists(output_directory):
@@ -633,7 +633,7 @@ if __name__ == '__main__':
         20: 1e-3, 
     }
     
-    to_train = False
+    to_train = True
     to_find_thresholds = True
     to_test = True
     if to_train:
