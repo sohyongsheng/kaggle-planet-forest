@@ -1,5 +1,6 @@
 import numpy
 import os.path
+import shutil
 import pandas
 import sklearn.preprocessing
 import sklearn.metrics
@@ -609,13 +610,12 @@ if __name__ == '__main__':
     test_image_directories = ['./data/test-jpg/', './data/test-jpg-additional/']
     test_image_extension = training_image_extension
     # Index your experiment.
-    experiment = 43
+    experiment = 44
     output_directory = './results/experiment' + str(experiment) + '/'
     template_output_directory = './results/experiment_template'
     if not os.path.exists(output_directory):
-            print('Creating', output_directory)
-            shutil.copytree(template_output_directory, output_directory)
-    exit()
+        print('Creating', output_directory)
+        shutil.copytree(template_output_directory, output_directory)
     learning_curves_directory = output_directory + 'learningCurves/'
     snapshots_directory = output_directory + 'snapshots/'
     models_directory = snapshots_directory + 'models/'
